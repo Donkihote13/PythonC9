@@ -1,0 +1,15 @@
+fDoc = open('D:\danhsach.txt', 'w')
+fDoc.write("Hoang Duoc Su")
+fDoc.write("\nDo Tien Si")
+fDoc.write("\nDao Nguyen Hat")
+fDoc.write("\n")
+fDoc.close()
+
+fDoc=open('D:\danhsach.txt', 'r')
+noiDung = fDoc.readlines()
+fDoc.close()
+noiDung.reverse()
+
+fGhi=open('D:\output.txt', 'w')
+fGhi.writelines(noiDung)
+fGhi.close()
