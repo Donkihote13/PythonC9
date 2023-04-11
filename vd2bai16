@@ -1,15 +1,11 @@
-fDoc = open('D:\danhsach.txt', 'w')
-fDoc.write("Hoang Duoc Su")
-fDoc.write("\nDo Tien Si")
-fDoc.write("\nDao Nguyen Hat")
-fDoc.write("\n")
-fDoc.close()
+# Mở file đầu vào và đọc giá trị của a, b và c
+with open("input.txt", "r") as f:
+    a, b, c = map(int, f.readline().split())
 
-fDoc=open('D:\danhsach.txt', 'r')
-noiDung = fDoc.readlines()
-fDoc.close()
-noiDung.reverse()
+# Tính tổng của hai phân số
+x = a * d + b*c
+y = b*d
 
-fGhi=open('D:\output.txt', 'w')
-fGhi.writelines(noiDung)
-fGhi.close()
+# Mở file đầu ra và ghi kết quả
+with open("output.txt", "w") as f:
+    f.write(f"{x} {y}\n")
