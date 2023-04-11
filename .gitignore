@@ -1,23 +1,23 @@
-fDoc = open('D:\input.txt', 'w')
-fDoc.write("Hoang Hoang")
-fDoc.write("\n6")
-fDoc.write("\n5.2 6.6 5.2 6.6 5.2 6.6")
-fDoc.write("\nTTTT")
-fDoc.close()
-fDoc = open('D:\input.txt', 'r')
-noiDung = fDoc.readlines()
-if len(noiDung) == 4:
-    s= noiDung[0]
-    n= int(noiDung[1])
-    a= noiDung[2]
-    c= noiDung[3]
 
-fDoc.close()
-f=a.split()
-t=0
-for i in f:
-    t+=float(i)
+def nguyento(so):
+    if so <= 1:
+        return False
+    for i in range(2, int(so ** 0.5) + 1):
+        if so % i == 0:
+            return False
+    return True
 
-fGhi= open('D:\output.txt', 'w')
-fGhi.write(str(t/n))
-fGhi.close()
+f=open('input.txt', 'r')
+n = int(f.readline())
+a = list(map(int, f.readline().split()))
+    
+f.close()
+
+t = 0
+for num in a:
+    if nguyento(so):
+        t += 1
+
+f=open('output.txt', 'w')
+f.write(str(t))
+f.close()
