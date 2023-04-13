@@ -15,7 +15,7 @@ n=b*d
 x=int(m/ucln(m,n))
 y=int(n/ucln(m,n))
 
-fGhi=open('D:\output.txt', 'w')
+fGhi=open('D:\output.txt', 'w+')
 fGhi.write(str(x))
 fGhi.write(str(y/n))
 fGhi.close()
