@@ -1,0 +1,22 @@
+fDoc=open('D:\input.txt', 'r')
+a=int(fDoc.readline())
+b=int(fDoc.readline())
+c=int(fDoc.readline())
+d=int(fDoc.readline())
+fDoc.close()
+
+def ucln(m,n):
+    if (n == 0):
+        return m;
+    return ucln(n, m%n);
+
+m=a*d +c*b
+n=b*d
+x=int(m/ucln(m,n))
+y=int(n/ucln(m,n))
+
+fGhi=open('D:\output.txt', 'w')
+fGhi.write(str(x))
+fGhi.write("\n")
+fGhi.write(str(y))
+fGhi.close()
