@@ -27,9 +27,6 @@ for i in f:
         c=': La so nguyen to'
         list.append(i)
         k=random.choice(list)
-    else:
-        c=': Khong co so nguyen to'
-        k=' '
 
 fGhi=open('D:\output.txt', 'w+')
 fGhi.write(str(k))
