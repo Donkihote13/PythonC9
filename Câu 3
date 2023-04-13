@@ -17,6 +17,5 @@ y=int(n/ucln(m,n))
 
 fGhi=open('D:\output.txt', 'w')
 fGhi.write(str(x))
-fGhi.write("\n")
-fGhi.write(str(y))
+fGhi.write(str(y/n))
 fGhi.close()
