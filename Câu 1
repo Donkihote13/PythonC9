@@ -1,0 +1,26 @@
+def chanle(a):
+    son = 1;
+    if( a % 2 == 0):
+        son= 0;
+    return son;  
+
+fDoc=open('D:\input.txt', 'r')
+noiDung=fDoc.readlines()
+i=int(noiDung[0])
+fDoc.close()
+list=[]
+for s in noiDung:
+    list.append(s.strip())
+
+print(list)
+a=int(list[i])
+so=chanle(a) ;
+if so==1:
+    c=': Le'
+else:
+    c=': Chan'
+
+fGhi=open('D:\output.txt', 'w+')
+fGhi.write(str(a))
+fGhi.write(c)
+fGhi.close()
