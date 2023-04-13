@@ -1,0 +1,37 @@
+import random
+def songuyento(n):
+    db = 1;
+    if (n <2):
+        db = 0
+        return db
+    for p in range(2, n):
+        if n % p == 0:
+            db = 0
+            break
+    return db
+
+fDoc = open('D:\input.txt', 'r')
+noiDung = fDoc.readlines()
+if len(noiDung) == 2:
+    a= int(noiDung[0])
+    b= noiDung[1]
+else:
+    print('Loi:/@$%#%#@^!$ ERROR ≧ ✯◡✯ ≦ ')
+
+fDoc.close()
+f=b.split()
+list=[]
+for i in f:
+    so= songuyento(int(i));
+    if so==1:
+        c=': La so nguyen to'
+        list.append(i)
+        k=random.choice(list)
+    else:
+        c=': Khong co so nguyen to'
+        k=' '
+
+fGhi=open('D:\output.txt', 'w+')
+fGhi.write(str(k))
+fGhi.write(str(c))
+fGhi.close()
