@@ -14,21 +14,21 @@ noidung.reverse()
 
 fDoc=open('D:\input.txt', 'r')
 noiDung=fDoc.read()
-t= noiDung[0]
 fDoc.close()
-f=t.split()
+f=noiDung.split()
 print(f)
+t=f[0:2]
 z=len(t)
-print(z)
 n=int(f[0])
-#k=int(f[2])
-k=6
-x=2
+k=int(f[1])
+x=z
 print(x)
 vong=k-(x-1)*4
 h=noiDung.split()
-l=h[z+1:n*n+z+1]
-ll=l[::-1]
+print(h)
+l=h[z:n*n+z+1]
+print(l)
+ll=l[n*n-1:0:-1]
 print(ll)
 fGhi=open('D:\output.txt', 'w+')
 if vong==0:
@@ -49,7 +49,7 @@ if vong==2:
     for i in range(0,n):
         y=ll[0+i*n:n+i*n]
         print(y)
-        fGhi.writelines(str(''.join(y))
+        fGhi.writelines(str(''.join(y)))
         fGhi.write("\n")
 
 if vong==3:
