@@ -1,4 +1,4 @@
-fdoc = open('D:\d.txt', 'w')
+fdoc = open('D:\d.txt', 'w+')
 fdoc.write("1000")
 fdoc.write("\n1100")
 fdoc.write("\n1011")
@@ -56,6 +56,6 @@ if vong==3:
     for i in range(0,n):
         y=l[n*n-n+i:1+i:-n]
         print(y)
-    fGhi.writelines(noiDung)
+    fGhi.writelines(noidung)
 
 fGhi.close()
