@@ -1,0 +1,23 @@
+fDoc = open('D:\input.txt', 'w+')
+fDoc.write("Jonathan Gialinhdo")
+fDoc.write("\n6")
+fDoc.write("\n5.2 6.6 5.2 6.6 5.2 6.6")
+fDoc.write("\nQWERTY")
+fDoc.close()
+fDoc = open('D:\input.txt', 'r')
+noiDung = fDoc.readlines()
+if len(noiDung) == 4:
+    s= noiDung[0]
+    n= int(noiDung[1])
+    a= noiDung[2]
+    c= noiDung[3]
+
+fDoc.close()
+f=a.split()
+t=0
+for i in f:
+    t+=float(i)
+
+fGhi= open('D:\output.txt', 'w+')
+fGhi.write(str(t/n))
+fGhi.close()
