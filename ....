@@ -1,61 +1,44 @@
-fdoc = open('D:\d.txt', 'w+')
-fdoc.write("1000")
-fdoc.write("\n1100")
-fdoc.write("\n1011")
-fdoc.write("\n0010")
-fdoc.write("\n")
-fdoc.close()
-
-fdoc=open('D:\d.txt', 'r')
-noidung = fdoc.readlines()
-fdoc.close()
-noidung.reverse()
-
-
+fDoc=open('D:\input.txt', 'r')
+t=fDoc.readline()
+fDoc.close()
 fDoc=open('D:\input.txt', 'r')
 noiDung=fDoc.read()
 fDoc.close()
-f=noiDung.split()
-print(f)
-t=f[0:2]
 z=len(t)
-n=int(f[0])
-k=int(f[1])
-x=z
-print(x)
-vong=k-(x-1)*4
+b=t.find(' ')
+k=int(t[b+1::])
+n=int(t[0:b])
+vong=k%4
 h=noiDung.split()
-print(h)
-l=h[z:n*n+z+1]
-print(l)
-ll=l[n*n-1:0:-1]
-print(ll)
+l=h[2:n*n+2]
+ll=l[::-1]
 fGhi=open('D:\output.txt', 'w+')
 if vong==0:
     for i in range(0,n):
         y=l[0+i*n:n+i*n]
         print(y)
-        fGhi.writelines(str(''.join(y)))
+        fGhi.writelines(str(' '.join(y)))
         fGhi.write("\n")
 
 if vong==1:
     for i in range(0,n):
         y=l[n-1-i:n*n:n]
         print(y)
-        fGhi.writelines(str(''.join(y)))
+        fGhi.writelines(str(' '.join(y)))
         fGhi.write("\n")
 
 if vong==2:
     for i in range(0,n):
         y=ll[0+i*n:n+i*n]
         print(y)
-        fGhi.writelines(str(''.join(y)))
+        fGhi.writelines(str(' '.join(y)))
         fGhi.write("\n")
 
 if vong==3:
     for i in range(0,n):
-        y=l[n*n-n+i:1+i:-n]
+        y=ll[n-1-i:n*n-i:n]
         print(y)
-    fGhi.writelines(noidung)
+        fGhi.writelines(str(' '.join(y)))
+        fGhi.write("\n")
 
 fGhi.close()
