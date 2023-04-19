@@ -1,0 +1,16 @@
+fdoc = open('D:\danhsach.txt', 'w+')
+fdoc.write("1000")
+fdoc.write("\n1100")
+fdoc.write("\n1011")
+fdoc.write("\n0010")
+fdoc.write("\n")
+fdoc.close()
+
+fdoc=open('D:\danhsach.txt', 'r')
+noidung = fdoc.readlines()
+fdoc.close()
+noidung.reverse()
+
+fGhi=open('D:\output.txt', 'w+')
+fGhi.writelines(noidung)
+fGhi.close()
